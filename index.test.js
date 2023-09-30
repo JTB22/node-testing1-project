@@ -88,13 +88,17 @@ describe("[Exercise 5] Seasons", () => {
     expect(seasons.next()).toBe("spring");
   });
   test('[13] the FIFTH call of seasons.next returns again "summer"', () => {
-    let season = "";
-    for (let i = 0; i <= 50; i++) {
-      season = seasons.next();
+    for (let i = 0; i < 4; i++) {
+      seasons.next();
     }
-    expect(season).toBe("summer");
+    expect(seasons.next()).toBe("summer");
   });
-  test('[14] the 40th call of seasons.next returns "spring"', () => {});
+  test('[14] the 40th call of seasons.next returns "spring"', () => {
+    for (let i = 0; i < 39; i++) {
+      seasons.next();
+    }
+    expect(seasons.next()).toBe("spring");
+  });
 });
 
 describe("[Exercise 6] Car", () => {

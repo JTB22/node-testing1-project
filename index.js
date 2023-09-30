@@ -90,7 +90,7 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
-    this.count = 4;
+    this.count = 3;
     this.seas = ["summer", "fall", "winter", "spring"];
   }
 
@@ -108,7 +108,7 @@ class Seasons {
    */
   next() {
     // ✨ implement
-    if (this.count === 4) {
+    if (this.count === 3) {
       this.count = 0;
     } else {
       this.count++;
